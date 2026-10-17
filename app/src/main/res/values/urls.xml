@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="urls">
+        <item name="video1" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/dubai.mp4</item>
+        <item name="video2" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/christmas-ornament.mp4</item>
+        <item name="video3" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/magma.mp4</item>
+        <item name="video4" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/baby-dancing.mp4</item>
+        <item name="video5" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/ski-lift.mov</item>
+        <item name="video6" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/temple.mp4</item>
+        <item name="video7" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/steve-dancing.mp4</item>
+        <item name="video8" type="string">https://raw.githubusercontent.com/EthanRocklin/open-source-footage/main/van-life.mp4</item>
+    </string-array>
+</resources>

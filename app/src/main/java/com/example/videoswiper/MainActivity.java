@@ -30,13 +30,17 @@ public class MainActivity extends AppCompatActivity {
         final ViewPager2 videoViewPager = findViewById(R.id.videoViewPager);
 
         List<VideoItem> videoItemsList = new ArrayList<>();
-        // Creates a temporary video for testing functionaity
-        VideoItem video1 = new VideoItem();
-        video1.setURL("URL_1");
-        video1.setTitle("Title1");
-        video1.setDescription("Description1");
-        videoItemsList.add(video1);
-
+        // Prepares videos into the list
+        String[] urls = getResources().getStringArray(R.array.urls);
+        String[] titles = getResources().getStringArray(R.array.titles);
+        String[] descriptions = getResources().getStringArray(R.array.descriptions);
+        for (int i = 0; i < urls.length; i++) {
+            VideoItem video = new VideoItem();
+            video.setURL(urls[i]);
+            video.setTitle(titles[i]);
+            video.setDescription(descriptions[i]);
+            videoItemsList.add(video);
+        }
         videoViewPager.setAdapter(new VideoAdapter(videoItemsList));
 
     }

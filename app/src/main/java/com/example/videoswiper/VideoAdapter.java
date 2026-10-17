@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 /**
- * 
+ *
  */
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
@@ -94,7 +94,6 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             videoView.setVideoPath(videoItem.getUrl());
             // Establishes a listener for playing the next video
             videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-
                 /**
                  *
                  * @param mp
@@ -102,27 +101,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 @Override
                 public void onPrepared(MediaPlayer mp) {
                     progressBar.setVisibility(View.GONE);
-                    // Computes the scale needed for adjusting a vertical or horizontal video to the screen.
-                    float videoRatio = mp.getVideoWidth() / (float) mp.getVideoHeight();
-                    float screenRatio = videoView.getWidth() / (float) videoView.getHeight();
-                    float scale = videoRatio / screenRatio;
-                    // Sets the scale of the video view (scale >= 1f is horizontal, otherwise vertical)
-                    if (scale >= 1f)
-                        videoView.setScaleX(scale);
-                    else {
-                        videoView.setScaleY(1f / scale);
-                    }
-                }
-            });
-            videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-                /**
-                 *
-                 * @param mp
-                 */
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.stop();
+                    mp.setLooping(true);
+                    mp.start();
                 }
             });
         }

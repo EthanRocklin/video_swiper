@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="descriptions">
+        <item name="description1" type="string">The last few days in Dubai have been wonderful!</item>
+        <item name="description2" type="string">I made cute ornaments for the holidays. DM me if want one!</item>
+        <item name="description3" type="string">The geology department found magma on their expedition!</item>
+        <item name="description4" type="string">Have you ever seen a dancing baby? Now you have in stunning fashion!</item>
+        <item name="description5" type="string">We took the kids to Snoqualmie to ski the slopes. What a fun time!</item>
+        <item name="description6" type="string">I found an old temple in the mountains! I wonder what the historical significance is?</item>
+        <item name="description7" type="string">Minecraft just gets weirder and weirder…</item>
+        <item name="description8" type="string">The van remains in good shape after months on the road!</item>
+    </string-array>
+</resources>

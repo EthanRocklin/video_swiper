@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="titles">
+        <item name="title1" type="string">Dubai Skyline</item>
+        <item name="title2" type="string">Neat Christmas Ornament</item>
+        <item name="title3" type="string">Magma Observation</item>
+        <item name="title4" type="string">Dancing Baby!!</item>
+        <item name="title5" type="string">Family Skiing Trip</item>
+        <item name="title6" type="string">Temple</item>
+        <item name="title7" type="string">Dancing Steve!!</item>
+        <item name="title8" type="string">Van Travels</item>
+    </string-array>
+</resources>
