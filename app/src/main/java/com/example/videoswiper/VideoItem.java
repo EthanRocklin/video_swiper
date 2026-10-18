@@ -8,6 +8,7 @@ public class VideoItem {
     private String description;
     private String title;
     private String url;
+    private String videoID;
 
 
 
@@ -20,6 +21,7 @@ public class VideoItem {
     public String getUrl() {
         return url;
     }
+    public String getVideoID() { return videoID; }
 
     public void setDescription(String description) {
         this.description = description;
@@ -30,6 +32,5 @@ public class VideoItem {
     public void setURL(String url) {
         this.url = url;
     }
-
-
+    public void setVideoID(String videoID) { this.videoID = videoID; }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="video_ids">
+        <item name="id1" type="string">19872365</item>
+        <item name="id2" type="string">35958215</item>
+        <item name="id3" type="string">36589927</item>
+        <item name="id4" type="string">84015934</item>
+        <item name="id5" type="string">13595215</item>
+        <item name="id6" type="string">35365698</item>
+        <item name="id7" type="string">12456382</item>
+        <item name="id8" type="string">13498624</item>
+    </string-array>
+</resources>

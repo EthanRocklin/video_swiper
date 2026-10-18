@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
         // Prepares videos into the list
         String[] urls = getResources().getStringArray(R.array.urls);
         String[] titles = getResources().getStringArray(R.array.titles);
+        String[] ids = getResources().getStringArray(R.array.video_ids);
         String[] descriptions = getResources().getStringArray(R.array.descriptions);
         for (int i = 0; i < urls.length; i++) {
             VideoItem video = new VideoItem();
             video.setURL(urls[i]);
             video.setTitle(titles[i]);
+            video.setVideoID(ids[i]);
             video.setDescription(descriptions[i]);
             videoItemsList.add(video);
         }

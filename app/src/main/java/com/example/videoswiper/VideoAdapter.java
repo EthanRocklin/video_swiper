@@ -67,6 +67,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     static class VideoViewHolder extends RecyclerView.ViewHolder {
         TextView videoTitleTV;
         TextView videoDescriptionTV;
+        TextView videoIdTV;
         VideoView videoView;
         ProgressBar progressBar;
 
@@ -79,6 +80,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             //
             videoView = itemView.findViewById(R.id.videoView);
             videoTitleTV = itemView.findViewById(R.id.videoTitleTV);
+            videoIdTV = itemView.findViewById(R.id.videoIdTV);
             videoDescriptionTV = itemView.findViewById(R.id.videoDescriptionTV);
             progressBar = itemView.findViewById(R.id.videoProgressBar);
         }
@@ -91,6 +93,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             //
             videoTitleTV.setText(videoItem.getTitle());
             videoDescriptionTV.setText(videoItem.getDescription());
+            String id = "ID: " + videoItem.getVideoID();
+            videoIdTV.setText(id);
             videoView.setVideoPath(videoItem.getUrl());
             // Establishes a listener for playing the next video
             videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
