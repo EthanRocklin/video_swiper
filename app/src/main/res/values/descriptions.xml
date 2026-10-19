@@ -2,7 +2,7 @@
 <resources>
     <string-array name="descriptions">
         <item name="description1" type="string">The last few days in Dubai have been wonderful!</item>
-        <item name="description2" type="string">I made cute ornaments for the holidays. DM me if want one!</item>
+        <item name="description2" type="string">I made cute ornaments for the holidays. DM me if want one! I only have 20 left, so get them while they are available!</item>
         <item name="description3" type="string">The geology department found magma on their expedition!</item>
         <item name="description4" type="string">Have you ever seen a dancing baby? Now you have in stunning fashion!</item>
         <item name="description5" type="string">We took the kids to Snoqualmie to ski the slopes. What a fun time!</item>

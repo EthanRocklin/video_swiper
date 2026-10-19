@@ -7,14 +7,15 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.VideoView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 /**
+ * This class acts as an adapter for the video being played, including sizing it while
+ * maintaining its aspect ratio and other functions needed for swiping between videos.
  *
+ * @author Ethan Rocklin
  */
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
@@ -26,11 +27,12 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     }
 
     /**
-     *
+     * This method creates and returns the VideoViewHolder object needed to display
+     * a VideoItem's content.
      * @param parent   The ViewGroup into which the new View will be added after it is bound to
      *                 an adapter position.
      * @param viewType The view type of the new View.
-     * @return
+     * @return a VideoViewHolder object for the targeted video's content to be bound to
      */
     @NonNull
     @Override
@@ -42,7 +44,18 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     }
 
     /**
-     *
+     * This method recycles the current VideoViewHolder and releases the resources
+     * being used by the current video's MediaPlayer.
+     * @param holder The ViewHolder for the view being recycled
+     */
+    @Override
+    public void onViewRecycled(@NonNull VideoViewHolder holder) {
+        super.onViewRecycled(holder);
+        holder.videoView.stopPlayback();
+    }
+
+    /**
+     * This method binds a VideoItem's data to its corresponding VideoViewHolder.
      * @param holder   The ViewHolder which should be updated to represent the contents of the
      *                 item at the given position in the data set.
      * @param position The position of the item within the adapter's data set.
@@ -53,8 +66,9 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     }
 
     /**
-     *
-     * @return
+     * This method is an overriden version of the getItemCount() method in
+     * RecyclerView.Adapter<VideoAdapter.VideoViewHolder>
+     * @return the number of videos currently listed
      */
     @Override
     public int getItemCount() {
@@ -62,7 +76,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     }
 
     /**
-     *
+     * This class represents the holder for the current video's details to be
+     * displayed in, including its streamed content.
      */
     static class VideoViewHolder extends RecyclerView.ViewHolder {
         TextView videoTitleTV;
@@ -72,8 +87,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         ProgressBar progressBar;
 
         /**
-         *
-         * @param itemView
+         * This is the constructor for the VideoViewHolder class.
+         * @param itemView the root UI layout
          */
         public VideoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -86,8 +101,9 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         }
 
         /**
-         *
-         * @param videoItem
+         * This method sets a video's data based on its available title, description,
+         * identification number, and URL.
+         * @param videoItem The video needing its details set to display in the UI
          */
         void setVideoData(VideoItem videoItem) {
             //
@@ -99,8 +115,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             // Establishes a listener for playing the next video
             videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 /**
-                 *
-                 * @param mp
+                 * This method plays a video once it is done buffering, and enables looping.
+                 * @param mp the MediaPlayer object
                  */
                 @Override
                 public void onPrepared(MediaPlayer mp) {

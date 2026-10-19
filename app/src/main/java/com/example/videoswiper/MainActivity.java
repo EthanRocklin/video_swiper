@@ -1,15 +1,12 @@
 package com.example.videoswiper;
 
 import android.os.Bundle;
-import android.provider.MediaStore;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,12 +22,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        //
+        // The layout that enables swiping between videos
         final ViewPager2 videoViewPager = findViewById(R.id.videoViewPager);
-
+        // Prepares videos and adds them to videoItemsList
         List<VideoItem> videoItemsList = new ArrayList<>();
-        // Prepares videos into the list
         String[] urls = getResources().getStringArray(R.array.urls);
         String[] titles = getResources().getStringArray(R.array.titles);
         String[] ids = getResources().getStringArray(R.array.video_ids);
@@ -44,6 +39,5 @@ public class MainActivity extends AppCompatActivity {
             videoItemsList.add(video);
         }
         videoViewPager.setAdapter(new VideoAdapter(videoItemsList));
-
     }
 }
