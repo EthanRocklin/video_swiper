@@ -2,7 +2,7 @@ This repository contains a video-swiping application that was built for CS 460, 
 at Central Washington University. Its primary language is Java, and it was developed in Android Studio (API level 26).  
 
 All videos were sourced from Pixabay, an open-source media platform. You may find their files at  
-https://github.com/EthanRocklin/open-source-footage or at the artist's Pixabay pages:  
+https://github.com/EthanRocklin/open-source-footage or at the artists' Pixabay pages:  
 
 baby-dancing.mp4          Pixabay : patw64  
 christmas-ornament.mp4    Pixabay : xBriantcx  
